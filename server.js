@@ -49,11 +49,11 @@ function findById(id, animalsArray) {
 }
 
 app.get('/api/animals', (req, res) => {
-    let results = animals;
+    let result = animals;
     if (req.query) {
-        results = filterByQuery(req.query, results);
+        result = filterByQuery(req.query, result);
     }
-    res.json(results);
+    res.json(result);
 });
 
 app.get('/api/animals:id', (req, res) => {
