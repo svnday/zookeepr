@@ -56,7 +56,7 @@ app.get('/api/animals', (req, res) => {
     res.json(result);
 });
 
-app.get('/api/animals:id', (req, res) => {
+app.get('/api/animals/:id', (req, res) => {
     const result = findById(req.params.id, animals);
     res.json(result);
 });
